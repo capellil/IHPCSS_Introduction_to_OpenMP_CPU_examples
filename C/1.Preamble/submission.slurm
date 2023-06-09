@@ -1,7 +1,8 @@
 #!/bin/bash
 
-#SBATCH --partition=GPU-shared
-#SBATCH -t 00:03:00
-#SBATCH --gres=gpu:v100-32:1
+#SBATCH -p RM-shared
+#SBATCH -t 00:00:20
+#SBATCH -N 1
+#SBATCH -n 1
 
 ./Preamble
