@@ -5,4 +5,4 @@
 #SBATCH -N 1
 #SBATCH -n 1
 
-./Preamble
+./bin/preamble
