@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS += -Wall -Wextra -O3 -fopenmp
+CFLAGS += -O3 -fopenmp
 SRC_DIR=src
 BIN_DIR=bin
 
