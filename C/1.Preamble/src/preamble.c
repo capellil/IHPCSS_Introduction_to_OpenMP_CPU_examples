@@ -7,12 +7,11 @@
  * - bin: contains the binary produced.
  *
  * The makefile provided already sets everything up for you:
- * - To compile it, you just need to issue the command `make`.
- * - To run it, simply issue the command `./bin/preamble`.
+ * - To compile: `make`.
+ * - To execute: `./bin/preamble`.
  *
  * If you have any questions, do not hesitate.
- * @author Ludovic Capelli
- * @email l.capelli@epcc.ed.ac.uk
+ * @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
  **/
 
 #include <stdio.h>
