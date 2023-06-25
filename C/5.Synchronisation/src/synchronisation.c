@@ -25,26 +25,19 @@
  **/
 int main()
 {
-	int* my_array = NULL;
+	int thread_count = 0;
 
-	#pragma omp parallel default(none) shared(my_array)
+	#pragma omp parallel default(none) shared(thread_count)
 	{
-		#pragma omp master
-		{
-			my_array = (int*)malloc(sizeof(int) * omp_get_num_threads());
-		}
-		#pragma omp barrier
 		#pragma omp critical
 		{
-			my_array[omp_get_thread_num()] = omp_get_thread_num();
+			thread_count++;
 		}
 		#pragma omp barrier
 		#pragma omp single
 		{
-			for(int i = 0; i < omp_get_num_threads(); i++)
-			{
-				printf("my_array[%d] = %d\n", i, my_array[i]);
-			}
+			// Restriction: the print statement must be kept inside the parallel region.
+			printf("There are %d threads.\n", thread_count);
 		}
 	}
 
