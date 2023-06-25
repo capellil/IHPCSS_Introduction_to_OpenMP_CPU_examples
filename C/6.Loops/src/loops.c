@@ -21,7 +21,8 @@
 /**
  * @brief The master thread allocates an array, and other threads wait. Once the
  * allocation is complete, each thread updates the array, before one thread, any
- * thread, prints the value of each element.
+ * thread, prints the value of each element. Update this code to use a loop for
+ * the value initialisation phase.
  **/
 int main()
 {
