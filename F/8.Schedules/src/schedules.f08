@@ -76,7 +76,6 @@ PROGRAM main
 	start = omp_get_wtime()
 
 	CALL srand(4)
-	! $OMP PARALLEL DO DEFAULT(NONE) SHARED(max, wait_time_granularity) PRIVATE(loop_i, last_rand) REDUCTION(+:rands) SCHEDULE(DYNAMIC)
 	DO loop_i = 0, max - 1
 		last_rand = INT(rand() * 10.0)
 		rands = rands + last_rand
