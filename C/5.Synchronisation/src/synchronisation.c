@@ -19,26 +19,19 @@
 #include <omp.h>
 
 /**
- * @brief The master thread allocates an array, and other threads wait. Once the
- * allocation is complete, each thread updates the array, before one thread, any
- * thread, prints the value of each element.
+ * @brief Threads manually count how many they are by incrementing a common
+ * variable. Once all threads have incremented this variable, one thread (not
+ * any one thread in particular) prints the value of that incremented variable.
  **/
 int main()
 {
 	int thread_count = 0;
 
-	#pragma omp parallel default(none) shared(thread_count)
+	#pragma omp parallel
 	{
-		#pragma omp critical
-		{
-			thread_count++;
-		}
-		#pragma omp barrier
-		#pragma omp single
-		{
-			// Restriction: the print statement must be kept inside the parallel region.
-			printf("There are %d threads.\n", thread_count);
-		}
+		thread_count++;
+		// Restriction: the print statement must be kept inside the parallel region.
+		printf("There are %d threads.\n", thread_count);
 	}
 
 	return EXIT_SUCCESS;
