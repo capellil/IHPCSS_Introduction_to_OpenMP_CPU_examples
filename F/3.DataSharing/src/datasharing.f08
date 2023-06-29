@@ -13,9 +13,7 @@
 !> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
 
 !> @brief Performs a few calculations, each requiring the corresponding variable
-!> to be properly setup when passed to the parallel construct. The last loop
-!> is not even parallelised at all, parallelise it and take care of the data-
-!> sharing attributes.
+!> to be properly setup when passed to the parallel construct.
 PROGRAM main
 	USE OMP_LIB
 
