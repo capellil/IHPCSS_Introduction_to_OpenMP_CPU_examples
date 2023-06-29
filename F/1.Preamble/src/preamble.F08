@@ -12,7 +12,7 @@
 !> If you have any questions, do not hesitate.
 !> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
 
-!> @brief Just prints a hello world message.
+!> @brief Just prints a desperate hello world message.
 PROGRAM main
 	USE OMP_LIB
 

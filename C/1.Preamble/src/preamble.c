@@ -19,7 +19,7 @@
 #include <omp.h>
 
 /**
- * @brief Just prints a hello world message.
+ * @brief Just prints a desperate hello world message.
  **/
 int main()
 {
