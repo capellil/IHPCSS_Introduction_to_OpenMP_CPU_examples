@@ -19,29 +19,24 @@
 #include <omp.h>
 
 /**
- * @brief The master thread allocates an array, and other threads wait. Once the
- * allocation is complete, each thread updates the array. Then, analystics about
- * the array values are calculated: sum, min and max. Finally, one thread, any
- * thread, prints the value of those metrics.
+ * @brief The objective is for each thread increments a common "thread_count"
+ * variable, to manually count the number of threads available.
+ * @details To do so, you must use two different approaches, without relying on
+ * the use of a barrier or critical construct.
  **/
 int main()
 {
+	// Approach 1
 	int thread_count = 0;
-	#pragma omp parallel default(none) shared(thread_count)
+	#pragma omp parallel
 	{
-		#pragma omp atomic
 		thread_count++;
-
-		#pragma omp barrier
-		#pragma omp single
-		{
-			// Restriction: the print statement must be kept inside the parallel region.
-			printf("There are %d threads.\n", thread_count);
-		}
 	}
+	printf("There are %d threads.\n", thread_count);
 
+	// Approach 2
     thread_count = 0;
-	#pragma omp parallel default(none) reduction(+:thread_count)
+	#pragma omp parallel
 	{
 		thread_count++;
 	}

@@ -12,10 +12,10 @@
 !> If you have any questions, do not hesitate.
 !> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
 
-!> @brief The master thread allocates an array, and other threads wait. Once the
-!> allocation is complete, each thread updates the array. Then, analystics about
-!> the array values are calculated: sum, min and max. Finally, one thread, any
-!> thread, prints the value of those metrics.
+!> @brief The objective is for each thread increments a common "thread_count"
+!> variable, to manually count the number of threads available.
+!> @details To do so, you must use two different approaches, without relying on
+!> the use of a barrier or critical construct.
 PROGRAM main
 	USE OMP_LIB
 
@@ -23,19 +23,13 @@ PROGRAM main
 
 	INTEGER :: thread_count = 0
 
-	!$OMP PARALLEL DEFAULT(NONE) SHARED(thread_count)
-		!$OMP ATOMIC
+	!$OMP PARALLEL
 		thread_count = thread_count + 1
-
-		!$OMP BARRIER
-		!$OMP SINGLE
-			! Restriction: the print statement must be kept inside the parallel region.
-			WRITE(*, '(A,I0,A)') 'There are ', thread_count, ' threads.'
-		!$OMP END SINGLE
 	!$OMP END PARALLEL
+	WRITE(*, '(A,I0,A)') 'There are ', thread_count, ' threads.'
 
     thread_count = 0
-	!$OMP PARALLEL DEFAULT(NONE) REDUCTION(+:thread_count)
+	!$OMP PARALLEL
 		thread_count = thread_count + 1
 	!$OMP END PARALLEL
 	WRITE(*, '(A,I0,A)') 'There are ', thread_count, ' threads.'
