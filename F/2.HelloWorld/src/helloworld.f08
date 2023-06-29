@@ -23,12 +23,6 @@ PROGRAM main
 	INTEGER :: my_thread_id = 0
 	INTEGER :: thread_count = 0
 	
-	!$OMP PARALLEL DEFAULT(NONE) SHARED(thread_count) PRIVATE(my_thread_id)
-	my_thread_id = omp_get_thread_num()
-	!$OMP SINGLE
-	thread_count = omp_get_num_threads()
-	!$OMP END SINGLE
 	WRITE(*, '(A,I0,A,A,I0,A)') 'Hello world, I am thread ', my_thread_id, '.', &
-						 	    ' We are ', thread_count, ' threads.'
-	!$OMP END PARALLEL
+								' We are ', thread_count, ' threads.'
 END PROGRAM main
