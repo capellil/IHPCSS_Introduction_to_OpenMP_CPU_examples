@@ -20,12 +20,14 @@
 
 /**
  * @brief Performs a few calculations, each requiring the corresponding variable
- * to be properly setup when passed to the parallel construct.
+ * to be properly setup when passed to the parallel construct. The last loop
+ * is not even parallelised at all, parallelise it and take care of the data-
+ * sharing attributes.
  **/
 int main()
 {
 	int thread_count = 0;
-	#pragma omp parallel default(none) shared(thread_count)
+	#pragma omp parallel
 	{
 		if(omp_get_thread_num() == 0)
 		{
@@ -39,7 +41,7 @@ int main()
 	/* Restriction: do not move the declaration of variable "my_thread_id"
 	   inside the parallel region. */
 	int my_thread_id = 0;
-	#pragma omp parallel default(none) shared(common_array) firstprivate(step) private(my_thread_id)
+	#pragma omp parallel
 	{
 		my_thread_id = omp_get_thread_num();
 		common_array[my_thread_id] = my_thread_id * step;
