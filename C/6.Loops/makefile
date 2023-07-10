@@ -1,4 +1,4 @@
-CC = gcc-13
+CC = gcc
 CFLAGS += -O3 -fopenmp
 SRC_DIR=src
 BIN_DIR=bin
