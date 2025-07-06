@@ -10,7 +10,7 @@
 !> - To execute: `./bin/helloworld`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 !> @brief Just prints a hello world message, displaying the thread identifier
 !> and the number of threads.

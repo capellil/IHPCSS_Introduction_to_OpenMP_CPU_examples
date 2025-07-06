@@ -10,7 +10,7 @@
 !> - To execute: `./bin/datasharing`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 !> @brief Performs a few calculations, each requiring the corresponding variable
 !> to be properly setup when passed to the parallel construct.

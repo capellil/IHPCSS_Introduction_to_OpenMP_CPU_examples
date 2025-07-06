@@ -10,7 +10,7 @@
 !> - To execute: `./bin/reduction`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 !> @brief The objective is for each thread increments a common "thread_count"
 !> variable, to manually count the number of threads available.

@@ -10,7 +10,7 @@
 !> - To execute: `./bin/whoseturn`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 !> @brief One thread, not one thread in particular, prints a statement. The
 !> master thread also has a statement to print, followed with a waiting period.

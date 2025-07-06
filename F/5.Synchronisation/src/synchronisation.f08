@@ -10,7 +10,7 @@
 !> - To execute: `./bin/synchronisation`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 !> @brief Threads manually count how many they are by incrementing a common
 !> variable. Once all threads have incremented this variable, one thread (not

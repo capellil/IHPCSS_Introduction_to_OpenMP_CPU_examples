@@ -11,7 +11,7 @@
  * - To execute: `./bin/whoseturn`.
  *
  * If you have any questions, do not hesitate.
- * @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+ * @author Ludovic Capelli (ludovic.capelli@csiro.au)
  **/
 
 #include <stdio.h>

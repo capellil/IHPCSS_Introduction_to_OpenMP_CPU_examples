@@ -10,7 +10,7 @@
 !> - To execute: `./bin/schedules`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 SUBROUTINE wait_for(s)
 	USE OMP_LIB

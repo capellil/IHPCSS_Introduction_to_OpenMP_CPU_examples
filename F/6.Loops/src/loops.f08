@@ -10,7 +10,7 @@
 !> - To execute: `./bin/loops`.
 !> 
 !> If you have any questions, do not hesitate.
-!> @author Ludovic Capelli (l.capelli@epcc.ed.ac.uk)
+!> @author Ludovic Capelli (ludovic.capelli@csiro.au)
 
 !> @brief The master thread allocates an array, and other threads wait. Once the
 !> allocation is complete, each thread updates the array, before one thread, any
