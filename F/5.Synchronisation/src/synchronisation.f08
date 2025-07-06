@@ -1,4 +1,4 @@
-!> @file synchronisation.c
+!> @file synchronisation.f08
 !> @brief This example is to illustrate basic synchronisation constructs.
 !> @details You will find two folders in this example, and will in all examples
 !> provided in this session:

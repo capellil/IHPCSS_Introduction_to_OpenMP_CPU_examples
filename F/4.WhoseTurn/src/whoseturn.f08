@@ -1,4 +1,4 @@
-!> @file whoseturn.c
+!> @file whoseturn.f08
 !> @brief This example is to illustrate basic worksharing directives.
 !> @details You will find two folders in this example, and will in all examples
 !> provided in this session:

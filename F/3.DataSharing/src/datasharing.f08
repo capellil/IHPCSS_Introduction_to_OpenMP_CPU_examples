@@ -1,4 +1,4 @@
-!> @file datasharing.c
+!> @file datasharing.f08
 !> @brief This example is to illustrate the basic data-sharing attributes.
 !> @details You will find two folders in this example, and will in all examples
 !> provided in this session:

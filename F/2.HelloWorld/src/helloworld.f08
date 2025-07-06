@@ -1,4 +1,4 @@
-!> @file helloworld.c
+!> @file helloworld.f08
 !> @brief This example is to write the OpenMP hello world.
 !> @details You will find two folders in this example, and will in all examples
 !> provided in this session:

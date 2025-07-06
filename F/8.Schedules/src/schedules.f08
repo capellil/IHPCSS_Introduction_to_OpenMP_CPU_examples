@@ -1,4 +1,4 @@
-!> @file schedules.c
+!> @file schedules.f08
 !> @brief This example is to illustrate the different schedules available.
 !> @details You will find two folders in this example, and will in all examples
 !> provided in this session:
